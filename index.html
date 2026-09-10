@@ -59,6 +59,29 @@
         animation: appear 850ms cubic-bezier(.2,.8,.2,1) both;
       }
 
+      nav {
+        position: absolute;
+        top: 1.45rem;
+        right: 1.65rem;
+        display: flex;
+        gap: 0.25rem;
+      }
+
+      nav a {
+        padding: 0.5rem 0.72rem;
+        border-radius: 999px;
+        color: var(--muted);
+        font-size: 0.82rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: color 160ms ease, background 160ms ease;
+      }
+
+      nav a:hover, nav a[aria-current="page"] {
+        color: var(--ink);
+        background: rgba(255,255,255,.14);
+      }
+
       .sparkle {
         display: inline-grid;
         place-items: center;
@@ -146,6 +169,11 @@
     <div class="orb two"></div>
 
     <main class="card">
+      <nav aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
       <div class="sparkle" aria-hidden="true">✦</div>
       <p class="eyebrow">A little moment for you</p>
       <h1>Hello, <em>Sai</em>.</h1>
